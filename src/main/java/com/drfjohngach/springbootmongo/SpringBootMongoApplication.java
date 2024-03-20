@@ -26,11 +26,17 @@ public class SpringBootMongoApplication {
 					"jamilla@gmail.com",
 					Gender.FEMALE,
 					address,
-					List.of("Computer Science"),
+					List.of("Computer Science", "Math"),
 					BigDecimal.TEN,
 					LocalDateTime.now()
 			);
-			repository.insert(student);
+			repository.findStudentByEmail(student.getEmail())
+					.ifPresentOrElse(s ->{
+						System.out.println("User with that email already exists");
+					}, () ->{
+						System.out.println("New student created " + student.getFirstName());
+						repository.insert(student);
+					});
 		};
 	}
 }
