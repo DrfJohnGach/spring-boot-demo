@@ -1,4 +1,4 @@
-package com.drfjohngach.springbootmongo;
+package com.drfjohngach.springbootmongo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

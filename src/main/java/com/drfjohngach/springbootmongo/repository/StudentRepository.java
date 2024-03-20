@@ -1,5 +1,6 @@
-package com.drfjohngach.springbootmongo;
+package com.drfjohngach.springbootmongo.repository;
 
+import com.drfjohngach.springbootmongo.model.Student;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
